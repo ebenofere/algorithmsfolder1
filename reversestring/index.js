@@ -20,8 +20,14 @@
 //   return joinArray;
 // }
 
+// function reverse(str) {
+//   return (finalArray = str.split("").reverse().join(""));
+// }
+
 function reverse(str) {
-  return (finalArray = str.split("").reverse().join(""));
+  const arr = str.split("");
+  arr.reverse();
+  return arr.join("");
 }
 
 module.exports = reverse;
