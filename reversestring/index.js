@@ -24,10 +24,24 @@
 //   return (finalArray = str.split("").reverse().join(""));
 // }
 
+// function reverse(str) {
+//   return str.split("").reverse().join("");
+// }
+
+// function reverse(str) {
+//   const arr = str.split("");
+//   arr.reverse();
+//   return arr.join("");
+// }
+
 function reverse(str) {
-  const arr = str.split("");
-  arr.reverse();
-  return arr.join("");
+  let reversed = "";
+
+  for (let item of str) {
+    reversed = item + reversed;
+  }
+
+  return reversed;
 }
 
 module.exports = reverse;
