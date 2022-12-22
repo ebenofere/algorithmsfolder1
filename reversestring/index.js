@@ -6,6 +6,8 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 // function reverse(str) {
 //   // Step 1: Use the split() method to return a new array
 //   var splitString = str.split("");
@@ -20,13 +22,19 @@
 //   return joinArray;
 // }
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 // function reverse(str) {
 //   return (finalArray = str.split("").reverse().join(""));
 // }
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 // function reverse(str) {
 //   return str.split("").reverse().join("");
 // }
+
+// ----------------------------------------------------------------------------------------------------------------------------------
 
 // function reverse(str) {
 //   const arr = str.split("");
@@ -34,14 +42,37 @@
 //   return arr.join("");
 // }
 
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+// function reverse(str) {
+//   let reversed = "";
+
+//   for (let item of str) {
+//     reversed = item + reversed;
+//   }
+
+//   return reversed;
+// }
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+// function reverse(str) {
+//   const splitString = str.split("");
+
+//   const reversedString = splitString.reduce((reversed, character) => {
+//     const updatedString = character + reversed;
+//     return updatedString;
+//   });
+
+//   return reversedString;
+// }
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
 function reverse(str) {
-  let reversed = "";
-
-  for (let item of str) {
-    reversed = item + reversed;
-  }
-
-  return reversed;
+  return str
+    .split("")
+    .reduce((reversed, character) => character + reversed, "");
 }
 
 module.exports = reverse;
