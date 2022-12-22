@@ -69,10 +69,38 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------------
 
+// function reverse(str) {
+//   return str
+//     .split("")
+//     .reduce((reversed, character) => character + reversed, "");
+// }
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+// function reverse(str) {
+//   return str.split("").reduce((rev, char) => char + rev, "");
+// }
+
+// ---------------------------------LEARNING TO USE THE DEBBUGER STATEMENT--------------------------------------------------
+
+// function reverse(str) {
+//   debugger;
+//   return str.split("").reduce((rev, char) => char + rev, "");
+// }
+
+// reverse("Hello");
+
+// ---------------------------------LEARNING TO USE THE DEBBUGER STATEMENT--------------------------------------------------
+
 function reverse(str) {
-  return str
-    .split("")
-    .reduce((reversed, character) => character + reversed, "");
+  let reversed = "";
+
+  for (let item of str) {
+    reversed = item + reversed;
+    debugger;
+  }
+
+  return reversed;
 }
 
 module.exports = reverse;
